@@ -82,18 +82,18 @@ def cleaning(doc, contraction_mapping):
 
 def process_data(data_type, contraction_mapping):
     print(f"Cleaning source {data_type} data")
-    with open(f"{data_type}_document.txt", 'r') as file:
+    with open(f"{data_type}_document_cnn.txt", 'r') as file:
         doc = file.readlines()
     final_data = cleaning(doc, contraction_mapping)
-    with open(f"src_{data_type}.txt", 'w') as file:
+    with open(f"src_{data_type}_cnn.txt", 'w') as file:
         for summary in tqdm(final_data):
             file.write(summary + '\n')
 
     print(f"Cleaning target {data_type} data")
-    with open(f"{data_type}_title.txt", 'r') as file:
+    with open(f"{data_type}_title_cnn.txt", 'r') as file:
         doc = file.readlines()
     final_data = cleaning(doc, contraction_mapping)
-    with open(f"tgt_{data_type}.txt", 'w') as file:
+    with open(f"tgt_{data_type}_cnn.txt", 'w') as file:
         for summary in tqdm(final_data):
             file.write(summary + '\n')
 

@@ -159,7 +159,7 @@ if __name__ == "__main__":
         "-m",
         "--model",
         type=str,
-        default="t5-small",
+        default="google/flan-t5-small",
         help="Name of the pre-trained summarization model to use (e.g., facebook/bart-large-cnn, t5-small)."
     )
     parser.add_argument(
