@@ -103,3 +103,18 @@ python train.py -data data/data -save_model ./saved_model \
 python translate.py -model saved_model_step_50000.pt -src ../src/truncated_docs/t_src_test.txt -output ./pred_mlp.txt -verbose \
                     --batch_size 512 --gpu 0
 ```
+## Hướng dẫn chạy concat caption
+```bash
+python concat_captions.py -a test_doc_name.txt -c ~/nhom4/test_data/caption/ -i ~/nhom4/test_data/img/ -b 16
+```
+
+## Hướng dẫn chạy rerank
+```bash
+python captions_reranking.py -t pred_mlp.txt -a test_doc_name.txt -c ../src/concat_caption/ -i ~/nhom4/test_data/img/ -m colbert --type test
+```
+
+## Hướng dẫn chạy tính điểm chọn đúng ảnh (annotation)
+```bash
+python IP_calculated.py --predict test_top_ranked_captions.txt --annotate image_annotation.txt
+```
+
