@@ -12,7 +12,7 @@ Github của môn quản lý dự án HTTT của Nhóm 4.
 - Hà Nguyễn Anh Sơn  
 
 ## Link Overleaf
-[Overleaf Project](https://www.overleaf.com/read/ssmjxfvzrhcz#aacc51)
+[Overleaf Project](https://www.overleaf.com/project/6721e6a1f57fb2d91f40ac79)
 
 ---
 
